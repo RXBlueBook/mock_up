@@ -7,20 +7,44 @@
     <title>RX Blue Book</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
 
-  <body background="px4.jpeg">
+  <body>
     <header>
-      <h2>About</h2>
-      <h2>Team</h2>
+      <nav class='navbar navbar-inverse navbar-fixed-top'>
+        <div class='container-fluid'>
+          <div class='navbar-header'>
+            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+              <span class='sr-only'>Toggle navigation</span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='javascript:void(0);' onClick='index.modal()'>RX Blue Book</a>
+          </div>
+          <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+            <ul class='nav navbar-nav'>
+              <li class='uniformLinks' id='US'><a href='/us'>Chronic Diseases<span class='sr-only'>(current)</span></a></li>
+              <li class='uniformLinks' id='inter'><a href='/intl'>Medications Database</a></li>
+              <li class='uniformLinks' id='takeAction'><a href='javascript:void(0);' onClick='index.takeAction()'>About</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
     </header>
-
-    <p>What do you want to research today?</p>
-    <select class="chronic">
-      <option value="diabetes">Diabetes</option>
-      <option value="heart disease">Heart Disease</option>
-      <option value="cancer">Cancer</option>
-      <option value="diabetes">Diabetes</option>
-    </select>
+    <div class="row" class="img-responsive center-block">
+      <div id="bgimage">
+        <div class="col-md-4" id="chronic">
+        <h4>What do you want to research today?</h4>
+        <select id="chronic" class="form-control">
+          <option value="" disabled selected> Condition </option>
+          <option value="diabetes">Diabetes</option>
+          <option value="heart disease">Heart Disease</option>
+          <option value="cancer">Cancer</option>
+          <option value="diabetes">Diabetes</option>
+        </select>
+      </div>
+    </div>
   </body>
 </html>
